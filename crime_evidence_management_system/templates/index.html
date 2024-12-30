@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forensics Evidence Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: blanchedalmond;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: url(../static/indexbg.jpg);
+      background-size: cover;
+    }
+
+    header, footer {
+      color: white;
+      padding: 1em 0;
+      text-align: center;
+      background-color: #333;
+      animation-name: example;
+      animation-duration: 4s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1em;
+    }
+
+    header img {
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    @keyframes example {
+      0%   {background-color: #333;}
+      25%  {background-color: rgb(33, 38, 36);}
+      50%  {background-color: rgb(71, 104, 143);}
+      100% {background-color: rgb(0, 117, 128);}
+    }
+
+    main {
+      padding: 2em;
+      max-width: 800px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    section {
+      animation: fade-in 1.5s ease-in;
+      text-align: center;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    button {
+      display: inline-block;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      margin: 1em 0;
+      background-color: #333;
+      color: blanchedalmond;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #555;
+    }
+
+    footer {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <img src="../static/Logo.jpg" alt="Forensics Logo">
+        <h1>Forensics Evidence Platform</h1>
+      </header>
+      <main>
+        <section>
+          <h1>Login for Higher Officials:</h1>
+          <button onclick="window.location.href='/aut_login'">Login</button><br>
+          <h1>Login for Officials:</h1>
+          <button onclick="window.location.href='/uaut_login'">Login</button>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2024 Forensics Evidences</p>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officials</title>
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url(../static/dash1.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slide-in-top 1s ease-out;
+        }
+
+        header img {
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            max-width: 40%;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fade-in 1.5s ease-in-out;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .crud-div {
+            position: absolute;
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .crud-div a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .crud-div h1 {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            animation: fade-in 1.5s ease-in-out;
+        }
+
+        .crud-div h1:hover {
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background-color: #e6f7ff;
+            color: black;
+        }
+
+        @keyframes slide-in-top {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        </style>
+    </head>
+<body>
+    <button onclick="window.location.href='/add_case'">Enter new case</button>
+</body>
+</html>
